@@ -178,3 +178,6 @@ document.querySelectorAll('.project-card, .skill-card').forEach(card => {
         card.style.transform = '';
     });
 });
+
+// ========== DISABLE RIGHT-CLICK ==========
+document.addEventListener('contextmenu', (e) => e.preventDefault());
