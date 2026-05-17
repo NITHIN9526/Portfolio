@@ -110,46 +110,61 @@ window.addEventListener('scroll', () => {
 const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 const submitBtn = document.getElementById('submitBtn');
-const hiddenIframe = document.getElementById('hidden_iframe');
-let formSubmitted = false;
+const successModal = document.getElementById('successModal');
+const modalClose = document.getElementById('modalClose');
 
-form.addEventListener('submit', (e) => {
-    // Client-side validation before allowing native POST to Google Forms
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
 
+    // Validation
     if (!name || !email || !message) {
-        e.preventDefault();
         formStatus.textContent = '⚠️ Please fill in all required fields.';
         formStatus.className = 'form-status error';
         return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        e.preventDefault();
         formStatus.textContent = '⚠️ Please enter a valid email address.';
         formStatus.className = 'form-status error';
         return;
     }
 
-    // Validation passed — let form POST to Google via hidden iframe
-    formSubmitted = true;
+    // Prepare submission
     submitBtn.innerHTML = '<span>Sending...</span>';
     submitBtn.disabled = true;
     formStatus.textContent = '';
+
+    try {
+        // Send to Google Forms (Sheets)
+        const formData = new FormData(form);
+        await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+        });
+
+        // Success flow
+        form.reset();
+        successModal.classList.add('active');
+        formStatus.textContent = '';
+    } catch (error) {
+        console.error('Submission error:', error);
+        formStatus.textContent = '❌ Something went wrong. Please try again.';
+        formStatus.className = 'form-status error';
+    } finally {
+        submitBtn.innerHTML = '<span>Send Message 🚀</span>';
+        submitBtn.disabled = false;
+    }
 });
 
-// iframe loads after Google Forms accepts the submission
-hiddenIframe.addEventListener('load', () => {
-    if (!formSubmitted) return;
-    formSubmitted = false;
-    formStatus.textContent = '✅ Message sent! I\'ll get back to you soon.';
-    formStatus.className = 'form-status success';
-    form.reset();
-    submitBtn.innerHTML = '<span>Send Message 🚀</span>';
-    submitBtn.disabled = false;
-    setTimeout(() => { formStatus.textContent = ''; formStatus.className = 'form-status'; }, 6000);
+modalClose.addEventListener('click', () => {
+    successModal.classList.remove('active');
 });
+
+
 
 // ========== SMOOTH HOVER TILT on Cards ==========
 document.querySelectorAll('.project-card, .skill-card').forEach(card => {

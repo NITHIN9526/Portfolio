@@ -1,6 +1,6 @@
 # Portfolio
 
-Professional portfolio for **Nithin**, a Computer Hardware Engineering student (Expected 2027).
+Professional portfolio for **Nithin U U**, pursuing a Diploma in Computer Hardware Engineering at GPC Palakkad (Batch 2025 - 2027).
 
 ## Tech Stack
 - **Frontend:** HTML, CSS, JavaScript (Vanilla)
