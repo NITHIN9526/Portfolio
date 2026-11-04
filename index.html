@@ -1,452 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
-    <link rel="apple-touch-icon" href="favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="NITHIN U U's personal portfolio — developer, designer, creator." />
-    <title>NITHIN U U | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
-    <!-- Replace 'PASTE_YOUR_CODE_HERE' with the code from Google Search Console -->
-    <meta name="google-site-verification" content="KG3Sr4-KRrjdRvUG_j1H8cxVy9SqytpfkDz_fFtdSzA" />
-
-    <!-- SITEMAP LINK -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Nithin U U — computer hardware engineering student building software, embedded systems and practical digital tools.">
+  <title>Nithin U U — Developer & Hardware Enthusiast</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="google-site-verification" content="KG3Sr4-KRrjdRvUG_j1H8cxVy9SqytpfkDz_fFtdSzA">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 </head>
-
 <body>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top" aria-label="Nithin home">N<span>.</span></a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Selected work</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="mailto:nithinu174@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span>
+      </button>
+    </header>
 
-    <!-- ========== NAVBAR ========== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-logo">NITHIN U U<span>.</span></div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
-
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="blob blob1"></div>
-            <div class="blob blob2"></div>
-            <div class="blob blob3"></div>
+    <main>
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> COMPUTER HARDWARE ENGINEERING · INDIA</p>
+          <h1>Curious by<br>nature. <span>Builder</span><br>by choice.</h1>
+          <p class="hero-intro">I’m Nithin — a developer and hardware enthusiast exploring the space where software meets the physical world.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="mailto:nithinu174@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta">
+            <span>BASED IN INDIA</span>
+            <span>OPEN TO COLLABORATION</span>
+          </div>
         </div>
-        <div class="hero-content">
-            <p class="hero-greeting">👋 Hello, I'm</p>
-            <h1 class="hero-name">NITHIN U U</h1>
-            <div class="hero-typewriter">
-                <span id="typewriter"></span><span class="cursor">|</span>
-            </div>
-            <p class="hero-desc">
-                Passionate about building beautiful, functional digital experiences.
-            </p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Hire Me</a>
-            </div>
-            <div class="hero-socials">
-                </a>
-                <a href="https://www.instagram.com/is_nithinn" target="_blank" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                    </svg>
-                </a>
-                <a href="mailto:nithinu174@gmail.com" aria-label="Email">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
-                </a>
-            </div>
+        <div class="hero-art" aria-label="Interactive 3D hardware-inspired artwork">
+          <canvas id="hero3d" class="hero-3d-canvas" aria-hidden="true"></canvas>
+          <div class="scene-hint" aria-hidden="true">MOVE TO EXPLORE <span>✳</span></div>
+          <div class="art-topline"><span>PERSONAL PORTFOLIO</span><span>2026 / 01</span></div>
+          <div class="art-grid"></div>
+          <div class="monogram"><span>N</span><i>U</i></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-cross cross-one"></div><div class="art-cross cross-two"></div>
+          <div class="art-caption"><span>HARDWARE</span><span>×</span><span>SOFTWARE</span></div>
+          <div class="art-index">01 — 04</div>
         </div>
-        <div class="hero-scroll">
-            <span>Scroll Down</span>
-            <div class="scroll-line"></div>
+        <a class="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><span class="scroll-arrow">↓</span></a>
+      </section>
+
+      <section class="intro-section section-wrap" id="about">
+        <div class="section-kicker"><span>01</span> / A LITTLE ABOUT ME</div>
+        <div class="intro-content">
+          <h2>Not just lines of code.<br><span>Things that work in the real world.</span></h2>
+          <div class="intro-bottom">
+            <p>I’m currently pursuing a Diploma in Computer Hardware Engineering at Government Polytechnic College, Palakkad (2025–2027). I enjoy learning by building — from web applications and self-hosted tools to embedded systems and hands-on electronics.</p>
+            <a class="circle-link" href="#contact" aria-label="Contact Nithin"><span>↗</span></a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- ========== ABOUT ========== -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-tag">About Me</div>
-            <h2 class="section-title">Who I Am</h2>
-            <div class="about-grid">
-                <div class="about-avatar">
-                    <div class="avatar-ring">
-                        <div class="avatar-inner">N</div>
-                    </div>
-                    <div class="about-badge">
-                        <span>🎓</span> Developer
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>
-                        Hi! I'm <strong>Nithin U U</strong>, currently pursuing a <strong>Diploma in Computer Hardware Engineering</strong> at <strong>GPC Palakkad</strong> (Batch 2025 - 2027). I'm passionate about the intersection of hardware and software, from assembling high-performance systems to developing robust applications.
-                    </p>
-                    <p>
-                        My journey involves mastering everything from low-level <strong>Embedded Systems</strong>
-                        to modern <strong>Django</strong> web development and complex **Network Administrations**.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-num" data-target="10">0</span>+
-                            <span class="stat-label">Projects</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num" data-target="2">0</span>+
-                            <span class="stat-label">Years Exp.</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num" data-target="100">0</span>%
-                            <span class="stat-label">Dedication</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                </div>
-            </div>
+      <section class="work-section section-wrap" id="work">
+        <div class="section-heading">
+          <div><div class="section-kicker"><span>02</span> / SELECTED WORK</div><h2>Made with<br><span>curiosity.</span></h2></div>
+          <p>A few projects from my ongoing experiments in software, interfaces and electronics.</p>
         </div>
-    </section>
-
-    <!-- ========== SKILLS ========== -->
-    <section class="skills section" id="skills">
-        <div class="container">
-            <div class="section-tag">What I Know</div>
-            <h2 class="section-title">My Expertise</h2>
-
-            <div class="skills-wrapper">
-                <!-- Software & Development -->
-                <h3 class="skill-category-title">Software & Web Development</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">🐍</div>
-                        <h3>Django & Python</h3>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="85"></div>
-                        </div>
-                        <span class="skill-pct">85%</span>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">⚙️</div>
-                        <h3>C & OOP</h3>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="80"></div>
-                        </div>
-                        <span class="skill-pct">80%</span>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🌐</div>
-                        <h3>HTML & Web Basics</h3>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="90"></div>
-                        </div>
-                        <span class="skill-pct">90%</span>
-                    </div>
-                </div>
-
-                <!-- Hardware & Troubleshooting -->
-                <h3 class="skill-category-title">Hardware & Troubleshooting</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">🛠️</div>
-                        <h3>Computer Assembling</h3>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="95"></div>
-                        </div>
-                        <span class="skill-pct">95%</span>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">💻</div>
-                        <h3>OS & Troubleshooting</h3>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">Windows/Linux,
-                            Laptops, Printers</p>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="90"></div>
-                        </div>
-                        <span class="skill-pct">90%</span>
-                    </div>
-                </div>
-
-                <!-- Networking & SysAdmin -->
-                <h3 class="skill-category-title">Networking & SysAdmin</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">📡</div>
-                        <h3>Server & NAS Setup</h3>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">Firewall, User mgmt,
-                            File sharing</p>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="85"></div>
-                        </div>
-                        <span class="skill-pct">85%</span>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🔌</div>
-                        <h3>Networking Basics</h3>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">RJ-45, Router/Switch
-                            Config</p>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="85"></div>
-                        </div>
-                        <span class="skill-pct">85%</span>
-                    </div>
-                </div>
-
-                <!-- Embedded & RTOS -->
-                <h3 class="skill-category-title">Embedded Systems</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">📟</div>
-                        <h3>Embedded & RTOS</h3>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-width="75"></div>
-                        </div>
-                        <span class="skill-pct">75%</span>
-                    </div>
-                </div>
-            </div>
+        <div class="project-list">
+          <article class="project-card project-blue">
+            <a class="project-visual visual-certificate" href="https://online-certificate-generator-app.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Certificate Generator live demo">
+              <div class="visual-window"><div class="window-bar"><i></i><i></i><i></i><span>CERTIFICATE / GENERATOR</span></div><div class="certificate-sheet"><small>AWARD OF ACHIEVEMENT</small><b>Certificate</b><em>OF PARTICIPATION</em><div class="cert-line"></div><span>NITHIN U U</span></div></div>
+              <span class="visual-number">01</span>
+            </a>
+            <div class="project-info"><div class="project-topline"><span>WEB APPLICATION</span><span>2025 — 2026</span></div><h3>Certificate Generator</h3><p>A bulk certificate tool with spreadsheet upload and customizable templates for events and competitions.</p><div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://online-certificate-generator-app.vercel.app/" target="_blank" rel="noreferrer">Live project ↗</a><a href="https://github.com/NITHIN9526/certificate-generator" target="_blank" rel="noreferrer">Source code ↗</a></div></div>
+          </article>
+          <article class="project-card project-lime">
+            <a class="project-visual visual-electro" href="https://electro-nova-nithin-uu.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open ElectroNova live demo">
+              <div class="circuit-board"><div class="chip"><span>EN</span></div><div class="circuit-line line-a"></div><div class="circuit-line line-b"></div><div class="circuit-line line-c"></div><div class="circuit-node node-a"></div><div class="circuit-node node-b"></div><div class="circuit-node node-c"></div><strong>Electro<br>Nova<span>.</span></strong></div><span class="visual-number">02</span>
+            </a>
+            <div class="project-info"><div class="project-topline"><span>HARDWARE / WEB</span><span>2025 — 2026</span></div><h3>ElectroNova</h3><p>A project portal for showcasing hardware builds, embedded systems, circuit concepts and technical experiments.</p><div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Supabase</span></div><div class="project-links"><a href="https://electro-nova-nithin-uu.vercel.app/" target="_blank" rel="noreferrer">Live project ↗</a><a href="https://github.com/NITHIN9526/ElectroNova" target="_blank" rel="noreferrer">Source code ↗</a></div></div>
+          </article>
+          <article class="project-card project-violet">
+            <a class="project-visual visual-editor" href="https://test-paper-format.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open QP Editor live demo">
+              <div class="editor-window"><div class="editor-toolbar"><span>QP EDITOR</span><span>↗ &nbsp; EXPORT PDF</span></div><div class="paper-preview"><small>GOVERNMENT POLYTECHNIC COLLEGE</small><b>QUESTION PAPER</b><span>PART A — SHORT ANSWERS</span><i></i><i></i><i></i><div class="math-line">∫ f(x) dx &nbsp; = &nbsp; F(x) + C</div><i></i><i></i></div></div><span class="visual-number">03</span>
+            </a>
+            <div class="project-info"><div class="project-topline"><span>PRODUCTIVITY TOOL</span><span>2026</span></div><h3>QP Editor</h3><p>A question paper builder with A4 layout preview, mathematical equations and one-click PDF export.</p><div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>MathJax</span></div><div class="project-links"><a href="https://test-paper-format.vercel.app/" target="_blank" rel="noreferrer">Live project ↗</a><a href="https://github.com/NITHIN9526/Test-Paper-format" target="_blank" rel="noreferrer">Source code ↗</a></div></div>
+          </article>
         </div>
-        <span class="skill-pct">85%</span>
-        </div>
-        </div>
-        </div>
-    </section>
+      </section>
 
-    <!-- ========== PROJECTS ========== -->
-    <section class="projects section" id="projects">
-        <div class="container">
-            <div class="section-tag">My Work</div>
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
+      <section class="toolkit-section section-wrap" id="toolkit">
+        <div class="section-kicker"><span>03</span> / WHAT I WORK WITH</div>
+        <div class="toolkit-layout"><h2>A growing<br><span>toolkit.</span></h2><div class="toolkit-groups">
+          <div class="toolkit-group"><span>01 / SOFTWARE</span><div><b>Python</b><b>Django</b><b>C</b><b>HTML & CSS</b><b>JavaScript</b></div></div>
+          <div class="toolkit-group"><span>02 / HARDWARE</span><div><b>Computer assembly</b><b>PC troubleshooting</b><b>ESP32</b><b>Embedded systems</b><b>Electronics</b></div></div>
+          <div class="toolkit-group"><span>03 / SYSTEMS</span><div><b>Linux</b><b>Networking</b><b>Self-hosting</b><b>NAS & servers</b><b>Git & GitHub</b></div></div>
+        </div></div>
+      </section>
 
-                <div class="project-card">
-                    <div class="project-img" style="background: linear-gradient(135deg,#667eea,#764ba2);">
-                        <span>🎓</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Certificate Generator</h3>
-                        <p>Bulk certificate generator with Excel upload, custom templates for sports & arts categories.
-                        </p>
-                        <div class="project-tags">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://online-certificate-generator-app.vercel.app/" target="_blank"
-                                class="btn btn-sm">Live Demo</a>
-                            <a href="https://github.com/NITHIN9526/certificate-generator" target="_blank"
-                                class="btn btn-sm">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+      <section class="contact-section section-wrap" id="contact">
+        <div class="section-kicker"><span>04</span> / HAVE SOMETHING IN MIND?</div>
+        <div class="contact-heading"><h2>Let’s make<br><span>it happen.</span></h2><a class="contact-email" href="mailto:nithinu174@gmail.com">nithinu174@gmail.com <span>↗</span></a></div>
+        <div class="contact-bottom"><p>Have an idea, a project, or just want to talk tech? My inbox is open.</p><div class="social-links"><a href="https://github.com/NITHIN9526" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.instagram.com/is_nithinn" target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
+        <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed_jOq2ihU80AaNIQE10t82kmyb6s82Ghkfr-3FR1OmtBb5A/formResponse" method="POST">
+          <div class="form-heading"><span>OR SEND A MESSAGE</span><span>ALL FIELDS MARKED * ARE REQUIRED</span></div>
+          <div class="form-grid">
+            <label>Your name *<input type="text" id="name" name="entry.1873736736" placeholder="Your name" required></label>
+            <label>Your email *<input type="email" id="email" name="entry.824716757" placeholder="you@example.com" required></label>
+            <label class="full-field">Subject<input type="text" id="subject" name="entry.1402763309" placeholder="What’s this about?"></label>
+            <label class="full-field">Message *<textarea id="message" name="entry.181032171" rows="4" placeholder="Tell me a little about it..." required></textarea></label>
+          </div>
+          <div class="form-submit-row"><p id="formStatus" role="status" aria-live="polite"></p><button class="button button-dark" type="submit" id="submitBtn">Send message <span>↗</span></button></div>
+        </form>
+      </section>
+    </main>
 
-                <div class="project-card">
-                    <div class="project-img" style="background: linear-gradient(135deg,#f093fb,#f5576c);">
-                        <span>💼</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Portfolio Website</h3>
-                        <p>A stunning personal portfolio with glassmorphism design, animations, and contact form.</p>
-                        <div class="project-tags">
-                            <span>HTML</span><span>CSS</span><span>JS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://nithin-uu-portfolio.vercel.app/" target="_blank"
-                                class="btn btn-sm">Live Demo</a>
-                            <a href="https://github.com/NITHIN9526/Portfolio" target="_blank"
-                                class="btn btn-sm">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img" style="background: linear-gradient(135deg,#11998e,#38ef7d);">
-                        <span>⚡</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>ElectroNova</h3>
-                        <p>A premium electronics project portal showcasing custom hardware designs, embedded systems,
-                            and circuit schematics with database integration.</p>
-                        <div class="project-tags">
-                            <span>HTML</span><span>CSS</span><span>JS</span><span>Supabase</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://electro-nova-nithin-uu.vercel.app/" target="_blank" class="btn btn-sm">Live
-                                Demo</a>
-                            <a href="https://github.com/NITHIN9526/ElectroNova" target="_blank"
-                                class="btn btn-sm">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">
-                        <span>📄</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>QP Editor</h3>
-                        <p>A professional WYSIWYG question paper builder for educators featuring live A4 layout previews, LaTeX mathematical equations, and one-click PDF export.</p>
-                        <div class="project-tags">
-                            <span>HTML</span><span>CSS</span><span>JS</span><span>MathJax</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://test-paper-format.vercel.app/" target="_blank"
-                                class="btn btn-sm">Live Demo</a>
-                            <a href="https://github.com/NITHIN9526/Test-Paper-format" target="_blank"
-                                class="btn btn-sm">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img" style="background: linear-gradient(135deg,#4facfe,#00f2fe);">
-                        <span>🚀</span>
-                    </div>
-                    <div class="project-body">
-                        <h3>Coming Soon</h3>
-                        <p>Next exciting project in the making. Stay tuned for something awesome!</p>
-                        <div class="project-tags">
-                            <span>In Progress</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#contact" class="btn btn-sm">Collaborate?</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="section-tag">Let's Talk</div>
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-grid">
-                <!-- Info Cards -->
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:nithinu174@gmail.com">nithinu174@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">🐙</div>
-                        <div>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/NITHIN9526" target="_blank">github.com/NITHIN9526</a>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">📍</div>
-                        <div>
-                            <h4>Location</h4>
-                            <span>India</span>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">⏰</div>
-                        <div>
-                            <h4>Availability</h4>
-                            <span>Open to Opportunities</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form — powered by Google Forms -->
-                <!-- Hidden iframe captures Google Form redirect without leaving your page -->
-
-
-                <form class="contact-form" id="contactForm"
-                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed_jOq2ihU80AaNIQE10t82kmyb6s82Ghkfr-3FR1OmtBb5A/formResponse"
-                    method="POST">
-
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="entry.1873736736" placeholder="John Doe" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="entry.824716757" placeholder="john@example.com" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="entry.1402763309" placeholder="Project Collaboration" />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="entry.181032171" rows="5"
-                            placeholder="Tell me about your project..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-                        <span>Send Message 🚀</span>
-                    </button>
-                    <div class="form-status" id="formStatus"></div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-logo">NITHIN U U<span>.</span></p>
-                <p>Built with ❤️ using HTML, CSS & JavaScript</p>
-                <p class="footer-copy">© 2025 NITHIN U U. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to top -->
-    <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
-
-    <!-- ========== SUCCESS MODAL ========== -->
-    <div class="modal-overlay" id="successModal">
-        <div class="modal-box">
-            <div class="modal-icon">
-                <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="modal-circle" cx="26" cy="26" r="25" stroke="url(#grad)" stroke-width="2" />
-                    <path class="modal-check" d="M14 26l9 9 16-18" stroke="url(#grad)" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <defs>
-                        <linearGradient id="grad" x1="0" y1="0" x2="52" y2="52">
-                            <stop offset="0%" stop-color="#7c3aed" />
-                            <stop offset="100%" stop-color="#06b6d4" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            <h3 class="modal-title">Message Sent! 🎉</h3>
-            <p class="modal-msg">Thank you for reaching out! I'll get back to you as soon as possible.</p>
-            <button class="btn btn-primary modal-close" id="modalClose">Got it 👍</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-
-    <!-- Vercel Speed Insights -->
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <footer class="site-footer"><a class="wordmark" href="#top">N<span>.</span></a><span>DESIGNED & BUILT BY NITHIN U U</span><span>© <span id="year">2026</span></span><a href="#top">BACK TO TOP ↑</a></footer>
+  </div>
+  <div class="success-toast" id="successToast" role="status" aria-live="polite">Thanks — your message has been submitted.</div>
+  <script type="module" src="scene.js"></script>
+  <script src="script.js"></script>
+  <script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
-
 </html>
