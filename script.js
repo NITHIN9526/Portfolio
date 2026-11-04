@@ -62,3 +62,35 @@ form?.addEventListener('submit', async event => {
     submitBtn.innerHTML = 'Send message <span>↗</span>';
   }
 });
+
+
+// Subtle scroll reveals and pointer-driven project depth.
+const revealTargets = document.querySelectorAll('.intro-section, .section-heading, .project-card, .toolkit-section, .contact-section, .contact-heading');
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  document.documentElement.classList.add('reveal-ready');
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.setAttribute('data-reveal', '');
+        requestAnimationFrame(() => entry.target.classList.add('is-visible'));
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealTargets.forEach(target => {
+    target.setAttribute('data-reveal', '');
+    revealObserver.observe(target);
+  });
+}
+
+document.querySelectorAll('.project-visual').forEach(card => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  card.addEventListener('pointermove', event => {
+    if (event.pointerType === 'touch') return;
+    const rect = card.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `perspective(850px) rotateX(${-y * 7}deg) rotateY(${x * 9}deg) translateY(-3px)`;
+  });
+  card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+});
